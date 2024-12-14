@@ -1,0 +1,1 @@
+alter table medicos add is_ativo tinyint(1);
