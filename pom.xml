@@ -79,6 +79,23 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -86,25 +103,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version> <!-- Ou a versão mais recente -->
 				<configuration>
+					<source>17</source> <!-- Substitua pela sua versão do Java -->
+					<target>17</target>
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+							<version>1.18.30</version> <!-- Use a versão correta -->
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
